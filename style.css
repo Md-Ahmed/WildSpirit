@@ -1,0 +1,342 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.nav{
+	position: fixed;
+	right: 0;
+	top: 30%;
+	top: 32vh;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	z-index: 10;
+}
+.nav ul{
+	list-style: none;
+}
+.nav ul a{
+	color: #f7941d;
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	background-color: #1b1b1b;
+}
+.nav ul a:hover{
+	background-color: #404040;
+}
+.nav ul a.active{
+	color: white;
+	background-color: #f7941d;
+}
+
+/* -------IDK------- */
+#home, #gallery, #about, #contact{
+	height: 100%;
+	height: 100vh;
+	min-height: 360px;
+	overflow: hidden;
+}
+/* -------IDK------- */
+
+#home{
+	background: url("banner.jpg") center center no-repeat;
+	background-size: cover;
+}
+.logo{
+	display: block;
+	margin: 0 auto;
+	padding-top: 28%;
+	padding-top: 28vh;
+	width: 62.5%;
+	width: 62.5vw;
+}
+
+.gallery-photos{
+	width: 40%;
+	height: 720px;
+	height: 100vh;
+	background-color: #1b1b1b;
+	box-shadow: inset -5px 0 10px rgba(0, 0, 0, .5);
+	float: left;
+}
+.gWrapper{
+	height: 90%;
+	width: 90%;
+	margin: 15% auto;
+}
+.thumbnail{
+	display: inline-block;
+	width: 30%;
+	height: 25%;
+	margin-top: 3%; //added so that photos don't hug the top on mobile view
+	margin-bottom: 3%;
+	margin-right: 2%;
+	vertical-align: top;
+	background: #fff center center no-repeat;
+	background-size: cover;
+}
+.thumbnail:hover{
+	box-shadow: inset 0 0 20px rgba(0, 0, 0, .5);
+	cursor: pointer;
+}
+div.img1{
+	background-image: url('img/1w.jpg');
+}
+div.img2{
+	background-image: url('img/2w.jpg');
+}
+div.img3{
+	background-image: url('img/3w.jpg');
+}
+div.img4{
+	background-image: url('img/4w.jpg');
+}
+div.img5{
+	background-image: url('img/5w.jpg');
+}
+div.img6{
+	background-image: url('img/6w.jpg');
+}
+div.img7{
+	background-image: url('img/7w.jpg');
+}
+div.img8{
+	background-image: url('img/8w.jpg');
+}
+div.img9{
+	background-image: url('img/9w.jpg');
+}
+.gallery-image{
+	width: 60%;
+	height: 720px;
+	height: 100vh;
+	background-color: #404040;
+	float: right;
+}
+.fImage{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #404040  center center no-repeat;
+	background-size: contain;
+}
+.jsError{
+	width: 100%;
+	height: 2em;
+	position: absolute;
+	top: 45%;
+	background-color: rgba(0, 0, 0, .5);
+	text-align: center;
+	line-height: 2em;
+}
+.jsError span{
+	color: white;
+}
+
+#about{
+	background-color: #086be2;
+}
+.face{
+	display: inline-block;
+	height: 45%;
+	height: 70vh;
+	border-radius: 50%;
+	border: 10px solid #fff;
+	margin: 15% 0 0 3.125%;
+	margin: 15vh 0 0 3.125%;
+}
+.details{
+	display: inline-block;
+	color: #fff;
+	vertical-align: top;
+	margin: 25% 0 0 5%;
+	margin: 25vh 0 0 5vw;
+	width: 45%;
+	width: 45vw;
+	font-size: 1em;
+	font-size: 3vh;
+}
+.details p{
+	margin-top: 2em;
+}
+
+#contact{
+	background-color: #1b1b1b;
+	position: relative;
+}
+.form{
+	display: block;
+	width: 28em;
+	margin: 0 auto;
+	margin-top: 10%;
+	margin-top: 10vh;
+}
+.form p{
+	margin-bottom: 1em;
+}
+.label{
+	display: inline-block;
+	width: 10em;
+	color: #fff;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+}
+.form input[type="text"], .form textarea{
+	opacity: .5;
+	width: 16em;
+	resize: none;
+}
+.form input[type="text"]:focus, .form textarea:focus{
+	opacity: 1;
+}
+.form select{
+	width: 16em;
+}
+.form input[type="submit"]{
+	margin-left: 12.4em;
+	width: 16em;
+	height: 2em;
+	background-color: #f7941d;
+	border: none;
+	color: white;
+}
+.form input[type="submit"]:hover{
+	background-color: #de861b;
+	cursor: pointer;
+}
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 4em;
+	background-color: #404040;
+	color: #fff;
+	padding: .8em 0 0 40px;
+	font-size: .8em;
+}
+
+@media (max-width: 960px){
+	/* -- Disabled for the moment
+	.nav{
+		position: static;
+		box-shadow: none;
+	}
+	.home, .gallery, .about, .contact{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	}
+	.home.open{
+		bottom: 295px;
+	}
+	.gallery.open{
+		bottom: 205px;
+	}
+	.about.open{
+		bottom: 115px;
+	}
+	.contact.open{
+		bottom: 25px;
+	}
+	.nav ul li{
+		height: 75px;
+		width: 75px;
+		border-radius: 50%;
+		background-color: orange;
+		text-align: center;
+		line-height: 75px;
+		list-style-type: none;
+		font-size: 5vw;
+		margin-top: 2.5vw;
+		transition: all .2s;
+		z-index: 10;
+	}
+	.nav ul a{
+		color: white;
+		display: inline;
+		padding: 0;
+		background-color: transparent;
+	}
+	.nav ul a:hover{
+		background-color: transparent;
+	}
+	.nav ul a.active{
+		background-color: transparent;
+		z-index: 10;
+	}
+	-- -- */
+
+	.nav {
+		visibility: hidden; //just for now
+	}
+	
+	.gallery-image, .gallery-photos{
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	.gallery-image{
+		height: 70%;
+	}
+	.gallery-photos{
+		height: 30%;
+	}
+	.gWrapper{
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		white-space: nowrap;
+		overflow-x: overlay;
+		overflow-y: hidden;
+	}
+	.thumbnail{
+		height: 85%;
+	}
+
+	.face{
+		display: block;
+		height: 30%;
+		height: 30vh;
+		margin: 5% auto 0 auto;
+		margin: 5vh auto 0 auto;
+		border-width: 4px;
+	}
+	.details{
+		display: block;
+		margin: 5% auto 0 auto;
+		margin: 5vh auto 0 auto;
+		width: 90%;
+		font-size: .8em;
+	}
+	.details p{
+		margin-top: 1em;
+	}
+
+	.form{
+		width: 100%;
+		margin-top: 1em;
+	}
+	.label{
+		display: block;
+		width: auto;
+		text-align: left;
+		margin: 0 0 .5em 5%;
+	}
+	.form input[type="text"], .form textarea, .form select, .form input[type="submit"]{
+		width: 90%;
+		height: 2em;
+		margin: 0;
+		margin-left: 5%;
+	}
+	.form textarea{
+		height: 4em;
+	}
+	.footer{
+		height: 4em;
+		padding-left: 2%;
+		font-size: .6em;
+	}
+}
